@@ -38,7 +38,7 @@ const BiometricAuth: React.FC<Props> = ({ setAuthenticated }) => {
       const { success } = await rnBiometrics.simplePrompt({
         promptMessage: 'Authenticate to access the app',
       });
-      console.log("success",)
+      console.log("success",success)
       if (success) {
         setAuthenticated(true);
       } else {
